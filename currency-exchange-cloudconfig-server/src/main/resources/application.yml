@@ -1,5 +1,13 @@
 spring:
    application:
       name: currency-cloud-config-server
+   cloud:
+      config:
+         server:
+            git:
+               uri: https://github.com/sachin19927/CurrencyExchangerMicroservice/tree/master/currency-exchange-cloudconfig-server/src/main/resources
+               username: sachin19927
+         
 server:
    port: 8888
+   
