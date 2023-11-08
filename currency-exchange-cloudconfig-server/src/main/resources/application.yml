@@ -1,0 +1,5 @@
+spring:
+   application:
+      name: currency-cloud-config-server
+server:
+   port: 8888
