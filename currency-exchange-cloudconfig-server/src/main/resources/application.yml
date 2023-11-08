@@ -5,8 +5,9 @@ spring:
       config:
          server:
             git:
-               uri: https://github.com/sachin19927/CurrencyExchangerMicroservice/tree/master/currency-exchange-cloudconfig-server/src/main/resources
-#               username: sachin19927
+               uri: https://github.com/sachin19927/CurrencyExchangerMicroservice.git
+#               skip-ssl-validation: true             
+# username: sachin19927
          
 server:
    port: 8888
