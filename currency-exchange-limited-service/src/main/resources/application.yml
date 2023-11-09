@@ -1,15 +1,23 @@
 spring:
+   application:
+      name: currency-exchange-limits-service
+   config:
+      import: optional:configserver:http://localhost:8888
+#   profiles:
+#      active: dev
    cloud:
       config:
-         import-check:
-            enabled: false
+         profile: test
+         name: limits-service
+#         import-check:
+#            enabled: false
 
 server:
    port: 8081
    
 limits:
    service:
-      minimum: 1
-      maximum: 1000
+      minimum: 5
+      maximum: 7000
       
       

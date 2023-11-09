@@ -1,0 +1,23 @@
+spring:
+   application:
+      name: currency-exchange-service
+   cloud:
+      config:
+         enabled: false
+   datasource:
+    url: jdbc:postgresql://localhost:15432/currency_exchange_microservice?currentSchema=currency_exchange
+    username: sachin19927
+    password: Sachin@123
+    driver-class-name: org.postgresql.Driver
+   jpa:
+    hibernate:
+      ddl-auto: update
+      globally_quoted_identifiers: true
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        hibernate: org.hibernate.dialect.PostgreSQL95Dialect       
+server:
+   port: 8000      

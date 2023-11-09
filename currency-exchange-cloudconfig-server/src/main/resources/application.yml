@@ -6,6 +6,7 @@ spring:
          server:
             git:
                uri: https://github.com/sachin19927/spring-cloud-config-server-files.git
+               default-label: master
 #               skip-ssl-validation: true             
 # username: sachin19927
          
