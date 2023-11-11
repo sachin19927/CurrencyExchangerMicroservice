@@ -1,11 +1,17 @@
 spring:
    application:
-      name: currency-conversion-service
+      name: api-gateway-micro-service
    cloud:
       config:
          enabled: false
+      gateway:
+         discovery:
+            locator:
+               enabled: true
+               lowerCaseServiceId: true 
+
 server:
-   port: 8100
+   port: 8765
 
 eureka:
    client:
@@ -13,8 +19,3 @@ eureka:
          defaultZone: http://localhost:8761/eureka
    instance:
       instance-id: ${spring.application.name}:${random.uuid}
-      prefer-ip-address: true
-      hostname: localhost         
-
-http:
-  url: http://CURRENCY-EXCHANGE-SERVICE         

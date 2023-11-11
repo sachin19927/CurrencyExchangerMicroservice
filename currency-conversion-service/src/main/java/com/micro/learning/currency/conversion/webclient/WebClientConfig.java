@@ -2,10 +2,10 @@ package com.micro.learning.currency.conversion.webclient;
 
 import static io.netty.handler.codec.http.HttpHeaders.Values.APPLICATION_JSON;
 import static org.springframework.http.HttpHeaders.ACCEPT;
-import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -27,6 +27,7 @@ public class WebClientConfig {
 	private String url;
 	
 	@Bean
+	@LoadBalanced
     HttpClient spaClient(WebClient.Builder webClientBuilder) {
 	
 		var webClient = webClientBuilder

@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.micro.learning.currency.conversion.model.CurrencyConversion;
 
-@FeignClient(name = "currency-exchange", url = "http://localhost:8001")
+//@FeignClient(name = "currency-exchange", url = "http://localhost:8001")
+@FeignClient(name = "CURRENCY-EXCHANGE-SERVICE")
 public interface ExchangeCurrencyProxy {
 
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
